@@ -4,8 +4,8 @@
 ![Claude Code skill](https://img.shields.io/badge/Claude%20Code-skill-D97757)
 ![Language: RU / EN](https://img.shields.io/badge/lang-RU%20%2F%20EN-blue)
 
-Скилл для [Claude Code](https://docs.anthropic.com/en/docs/claude-code), который
-переписывает текст модели так, чтобы он читался как речь живого человека.
+Скилл для [Claude Code](https://docs.anthropic.com/en/docs/claude-code) и других
+AI-агентов, который переписывает текст модели так, чтобы он читался как речь живого человека.
 Заточен под русский язык.
 
 ## TL;DR
@@ -84,6 +84,18 @@ git clone https://github.com/Hakoba/deslop ~/.claude/skills/deslop
 ```
 
 Для одного проекта положите папку в `.claude/skills/deslop` внутри репозитория.
+
+### Другие агенты
+
+Скилл написан в открытом формате [Agent Skills](https://agentskills.io): папка
+с `SKILL.md`, YAML-фронтматтером и обычным markdown внутри. Ничего специфичного
+для Claude там нет, поэтому скилл работает в любом агенте, который понимает
+этот формат (Codex, Cursor, Gemini CLI, OpenCode и другие). Клонируйте папку в
+каталог скиллов вашего агента, путь смотрите в его документации.
+
+Если агент скиллы не поддерживает, вставьте содержимое `SKILL.md` в системный
+промпт, `AGENTS.md` или кастомные инструкции. Правила сработают так же, просто
+без автоматического вызова по ключевым словам.
 
 ## Использование
 
